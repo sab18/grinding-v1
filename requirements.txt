@@ -7,4 +7,4 @@ pandas
 dash-tools
 setuptools==68
 wheel
-pymongo
+pymongo==4.10.1
