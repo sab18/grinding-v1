@@ -9,7 +9,9 @@ import pymongo
 # mango=os.environ.get(mongo_creds)
 client = pymongo.MongoClient("mongodb+srv://sarabarrows18:mongo@cluster0.vgo9y.mongodb.net/"
     )
-
+db = client["test-db"]
+# Go into one of my database's collection (table)
+collection = db["table"]
 
 app=dash.Dash(__name__)
 server=app.server
@@ -31,9 +33,19 @@ app.layout = html.Div(
 def callbk(n_clicks, input_val):
     
     if n_clicks > 0 and input_val:
-                
+                    
 
-        
+        record = {
+            "employee": input_val,
+            "department": "engineering",
+            "product": "PC",
+            "part": "motherboard",
+            "quantity": "12",
+            "day": "Saturday"
+        }
+
+        collection.insert_one(record)
+        testing = collection.find_one()
 
         return f'{input_val} has been entered'
     return ''
