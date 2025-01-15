@@ -4,10 +4,18 @@ from dash.dependencies import Input, Output, State
 
 # import os
 import pymongo
+import os
 
+# from dashgui req file:
+# dash==2.18.2
+# pymongo==4.10.1
+# gunicorn
+# pandas
+# dash-tools
 
-# mango=os.environ.get(mongo_creds)
-client = pymongo.MongoClient("mongodb+srv://sarabarrows18:mongo@cluster0.vgo9y.mongodb.net/"
+# "mongodb+srv://sarabarrows18:mongo@cluster0.vgo9y.mongodb.net/"
+mango=os.environ.get("mongo_creds")
+client = pymongo.MongoClient(mango
     )
 db = client["test-db"]
 # Go into one of my database's collection (table)
