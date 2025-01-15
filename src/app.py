@@ -17,8 +17,8 @@ import os
 mango=os.environ.get("mongo_creds")
 client = pymongo.MongoClient(mango
     )
-db = client["spotify_v2_1"]
-collection = db["main_log"]
+db = client["spotify-v2-1"]
+collection = db["main-log"]
 
 app=dash.Dash(__name__)
 server=app.server
