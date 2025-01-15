@@ -13,7 +13,7 @@ import os
 # pandas
 # dash-tools
 
-# "mongodb+srv://sarabarrows18:mongo@cluster0.vgo9y.mongodb.net/"
+
 mango=os.environ.get("mongo_creds")
 client = pymongo.MongoClient(mango
     )
