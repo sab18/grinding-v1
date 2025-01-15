@@ -2,14 +2,13 @@ import dash
 from dash import html, dcc
 from dash.dependencies import Input, Output, State
 
-import gspread
-from google.oauth2.service_account import Credentials
-
-import json
 import os
-from dotenv import load_dotenv
+import pymongo
 
 
+mango=os.environ.get(mongo_creds)
+client = pymongo.MongoClient(mango
+    )
 
 
 app=dash.Dash(__name__)
