@@ -1,7 +1,7 @@
 services:
   # See https://render.com/docs/blueprint-spec for more info on render blueprints
   - type: web
-    name: grinding-v1-2
+    name: saras-top-secret-website
     env: python
     plan: free
     # A requirements.txt file must exist
