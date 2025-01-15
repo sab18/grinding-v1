@@ -8,4 +8,3 @@ dash-tools
 setuptools==68
 wheel
 pymongo
-os

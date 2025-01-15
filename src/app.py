@@ -2,12 +2,12 @@ import dash
 from dash import html, dcc
 from dash.dependencies import Input, Output, State
 
-import os
+# import os
 import pymongo
 
 
-mango=os.environ.get(mongo_creds)
-client = pymongo.MongoClient(mango
+# mango=os.environ.get(mongo_creds)
+client = pymongo.MongoClient("mongodb+srv://sarabarrows18:mongo@cluster0.vgo9y.mongodb.net/"
     )
 
 
